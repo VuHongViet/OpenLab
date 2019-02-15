@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="layout.css">
     <title>Document</title>
 </head>
 
@@ -15,6 +16,42 @@
             the search option.
         </p>
     </header>
+    <main>
+        <article>
+            <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search" title="Type in a category">
+            <ul id="myMenu">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">jQuery</a></li>
+                <li><a href="#">SQL</a></li>
+                <li><a href="#">Bootsrap</a></li>
+                <li><a href="#">NodeJs</a></li>
+            </ul>
+        </article>
+    </main>
+    <script>
+        function myFunction()
+        {
+            var input, fitter, ul, li, a, i;
+            input=document.getElementById("mySearch");
+            fitter=input.value.toUpperCase();
+            ul=document.getElementById("myMenu");
+            li=ul.getElementsByTagName("li");
+            for(i=0;i<li.length;i++)
+            {
+                a=li[i].getElementsByTagName("a")[0];
+                if(a.innerHTML.toUpperCase().indexOf(fitter)>-1){
+                    li[i].style.display="";
+                }
+                else{
+                    li[i].style.display="none";
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
