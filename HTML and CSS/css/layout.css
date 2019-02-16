@@ -20,3 +20,50 @@
 #myMenu li a:hover{
     background-color: #eeeeee;
 }
+aside{
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+aside a{
+    display: block;
+    text-decoration: none;
+    padding: 16px;
+    color: black;
+}
+aside a:first-of-type{
+    background-color: #4caf50;
+    color: white;
+}
+aside a:hover:not(.active){
+    background-color: #555;
+    color: white;
+}
+article{
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+@media screen and ( max-width:700px){
+    aside  {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    aside a{
+        float: left;
+    }
+    article{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width:400px){
+    aside a {
+        text-align: center;
+        float: none ;
+    }
+}

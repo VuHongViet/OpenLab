@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="css/layout.css">
     <title>Document</title>
 </head>
 
@@ -33,21 +33,19 @@
         </article>
     </main>
     <script>
-        function myFunction()
-        {
+        function myFunction() {
             var input, fitter, ul, li, a, i;
-            input=document.getElementById("mySearch");
-            fitter=input.value.toUpperCase();
-            ul=document.getElementById("myMenu");
-            li=ul.getElementsByTagName("li");
-            for(i=0;i<li.length;i++)
-            {
-                a=li[i].getElementsByTagName("a")[0];
-                if(a.innerHTML.toUpperCase().indexOf(fitter)>-1){
-                    li[i].style.display="";
+            input = document.getElementById("mySearch");
+            fitter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(fitter) > -1) {
+                    li[i].style.display = "";
                 }
-                else{
-                    li[i].style.display="none";
+                else {
+                    li[i].style.display = "none";
                 }
             }
         }
