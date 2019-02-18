@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+        </div>
+    </header>
+    <main class="main">
+        <h2>Responsive Topnav Example</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quod reprehenderit unde! Animi excepturi
+            repellat maiores adipisci maxime asperiores aut, sit fugiat recusandae, ad itaque quae. Quia ipsum nesciunt
+            quos eius nulla, quaerat in soluta velit, deserunt itaque obcaecati est eaque officia nobis impedit tempora
+            recusandae voluptatibus. Tempora, neque praesentium?</p>
+    </main>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsived";
+            }
+            else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>
