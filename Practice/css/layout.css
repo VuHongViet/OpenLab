@@ -1,8 +1,8 @@
-*{
-    box-sizing: border-box;
-}
-body{
+
+body,html{
     margin: 0;
+    padding: 0;
+    height: 100%;
     background-color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -12,7 +12,6 @@ header{
     display: flex;
    justify-content: space-between;
     align-items: center;
-    overflow: auto;
 }
 
 .header-left button{
@@ -27,9 +26,6 @@ header{
 #logo a{
     font-size: 30px;
     color: black
-}
-.button{
-    text-transform: uppercase
 }
 .header-right a:first-child{
     margin-right: 8px;
@@ -54,21 +50,57 @@ header{
     font-size: 10px;
     line-height: 17px;
 }
-/* main */
-#slide{
-    background-image: url('../image/homepage@2x_02.jpg');
-    background-repeat: no-repeat;
-    height: 325px;
-    position: relative;
+.text{
+    text-transform: uppercase;
+    font-weight: bold;
 }
-#button{
+/* main */
+.hero-image{
+    position: relative;
+    height: 325px;
+    overflow: hidden;
+    background: url('../image/homepage@2x_02.jpg') no-repeat center;
+    background-size: cover;
+}
+.button{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+main button{
     width: 220px;
     height: 35px;
     text-align: center;
-    position: absolute;
-    color: #f0f7fc;
     background-color: #4894d1;
+    color: #f0f7fc;
     border: none;
-    top: 80%;
-    left: 19%;
+}
+
+.list:first-of-type{
+    margin-top: 65px;
+}
+.list{
+    text-align: center;
+}
+.list img{
+    margin-bottom: 50px;
+}
+.list:nth-child(1){
+    margin-bottom: 60px;
+}
+.list:nth-child(2){
+    background-color: #f4f4f4;
+    margin-bottom: 60px;
+}
+.list:nth-child(3){
+   background-color: #f8f8f8;
+   margin-bottom: 60px;
+}
+.list .kolye{
+    margin-top: -120px;
+}
+.list:nth-child(4){
+    margin-bottom: 76px;
 }
